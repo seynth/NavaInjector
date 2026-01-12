@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Costura.Fody.6.0.0\build\Costura.Fody.props" Condition="Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F13EF79-3BD7-46F5-AFAB-35F80591D175}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Milim</RootNamespace>
+    <AssemblyName>Milim</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.4.2\lib\net472\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.BrowserSubprocess.Core">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\CefSharp.BrowserSubprocess.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\CefSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.Core.Runtime">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\CefSharp.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Costura, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>packages\Costura.Fody.6.0.0\lib\netstandard2.0\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.Wasapi">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\NAudio.Wasapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.exe</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Applications">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Applications.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Applications.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Applications.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Browser">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Browser.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Browser.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Browser.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Client">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Client.exe</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Communication">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Communication.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Communication.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Configuration">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Configuration.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Configuration.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Core">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Core.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Core.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.I18n">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.I18n.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.I18n.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.I18n.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Logging">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Logging.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Logging.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Monitoring">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Monitoring.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Monitoring.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Monitoring.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Proctoring">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Proctoring.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Proctoring.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Proctoring.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Server">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Server.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Server.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.Settings">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.SystemComponents">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.SystemComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.SystemComponents.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.SystemComponents.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.UserInterface.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.UserInterface.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.UserInterface.Desktop">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.UserInterface.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.UserInterface.Mobile">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.UserInterface.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.UserInterface.Shared">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.UserInterface.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.WindowsApi">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.WindowsApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SafeExamBrowser.WindowsApi.Contracts">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\SafeExamBrowser.WindowsApi.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Syroot.KnownFolders">
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\Syroot.KnownFolders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\SafeExamBrowser\Application\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Milim.cs" />
+    <Compile Include="patch\ExplorerShell.cs" />
+    <Compile Include="patch\KeyboardInterceptor.cs" />
+    <Compile Include="patch\MilimApplicationMonitor.cs" />
+    <Compile Include="patch\MilimDesktopFactory.cs" />
+    <Compile Include="patch\MilimDesktopMonitor.cs" />
+    <Compile Include="patch\MouseInterceptor.cs" />
+    <Compile Include="patch\NativeMethods.cs" />
+    <Compile Include="patch\ProcessFactory.cs" />
+    <Compile Include="patch\TaskviewKeyboardActivator.cs" />
+    <Compile Include="patch\UserInterface.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.6.0.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.6.0.0\build\Costura.Fody.targets'))" />
+    <Error Condition="!Exists('packages\Fody.6.9.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.6.9.3\build\Fody.targets'))" />
+  </Target>
+  <Import Project="packages\Costura.Fody.6.0.0\build\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.6.0.0\build\Costura.Fody.targets')" />
+  <Import Project="packages\Fody.6.9.3\build\Fody.targets" Condition="Exists('packages\Fody.6.9.3\build\Fody.targets')" />
+</Project>

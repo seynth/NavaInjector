@@ -35,7 +35,7 @@ go build -o nava.dll --buildmode=c-shared
 
 Usage is very simple, you just need to run NavaInjector.exe as Administrator, but make sure to turn off Real-time Protection windows defender.
 
-Wait until it say `[Nava] Starting`, then you can start your Safe Exam Browser, run from browser, or by double clicking .seb file configuration. After NavaInjector reaching EOF you can close your terminal
+Wait until it say `[Nava] Starting`, then you can start your Safe Exam Browser by double clicking .seb file configuration. After NavaInjector reaching EOF you can close your terminal
 
 
 
